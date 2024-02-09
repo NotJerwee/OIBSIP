@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class GuessTheNumber {
     
     public static void main(String[] args) {
-
+        
         Scanner input = new Scanner(System.in);
         Random random = new Random();
 
@@ -15,7 +15,7 @@ public class GuessTheNumber {
         int attempts = 0;
         int maxAttempts = 10;
         int targetNumber = random.nextInt(100) + 1;
-        
+
         while (maxAttempts > attempts) { 
             System.out.print("Guess #" + (attempts + 1) + ": Enter your guess: ");
             int guess = input.nextInt();
