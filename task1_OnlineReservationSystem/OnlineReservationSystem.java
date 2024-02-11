@@ -20,6 +20,10 @@ public class OnlineReservationSystem {
                     System.out.print("Enter Your Password : ");
                     String password = sc.next();
                     Account.registerUser(passengerName, password);
+                    System.out.println("1. Register");
+                    System.out.println("2. Login");
+                    System.out.println("3. Exit");
+                    System.out.print("Choose option : ");
                     break;
                 case 2:
                     System.out.println("Login Form\n----------");
@@ -30,7 +34,7 @@ public class OnlineReservationSystem {
                     boolean isLoggedIn = Account.login(loginPassengerName, loginPassword);
                     if (isLoggedIn) {
                         System.out.println("Login successful!");
-
+                        Account.makeReservation
                     } else {
                         System.out.println("Invalid credentials. Please try again.");
                     }
@@ -43,6 +47,6 @@ public class OnlineReservationSystem {
                     System.out.println("Invalid choice. Please enter a valid option.");
             }
         }
-        sc.close(); // Close the scanner when done using it
+        sc.close(); 
     }
 }

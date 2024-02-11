@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Scanner;
 
 public class Account {
     
@@ -6,9 +7,11 @@ public class Account {
     private static String password;
     private static boolean loggedIn = false;
 
+    Scanner sc = new Scanner(System.in);
 
-    public void logOut(){
-        userId = 0;
+
+    public static void logOut(){
+        int userId = 0;
         loggedIn = false;
     }
 
@@ -21,7 +24,6 @@ public class Account {
     public static boolean login(String passengerName, String password) {
         if(passengerName.equals(Account.passengerName) && password.equals(Account.password)) {
             return true;
-            loggedIn = true;
         } {
             return false;
         }
@@ -38,20 +40,30 @@ public class Account {
             System.out.println();
             System.out.print("Choose option : ");
             int opt = sc.nextInt();
-            sc.nextLine();
             switch (opt) {
                 case 1:
-                makeReservation(listOfTrain);
+                    makeReservation();
                 case 2:
-                    cancelReservation(passengerDetails);
+                    cancelReservation();
                 case 3:
-                    displayAllTickets(passengerDetails);
+                    displayAllTickets();
                 case 4:
                     logOut();
                 default:
                     System.out.println("Choose a correct a option");
             }
         }
+    }
+
+    public void makeReservation() {
+        System.out.println("Reserve a Reservation");
+        System.out.println("+------------------------+");
+
+              System.out.println("Enter your Source station : ");
+              String source = sc.nextLine();
+
+              System.out.println("Enter your destination : ");
+              String destination = sc.nextLine();
     }
 
 

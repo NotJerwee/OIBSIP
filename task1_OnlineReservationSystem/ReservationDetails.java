@@ -1,14 +1,14 @@
 public class ReservationDetails{
 
     private String passengerName;
-    private String origin;
+    private String source;
     private String destination;
     private String pnrNumber;
     private int userId;
 
-    public ReservationDetails(String passengerName, String origin, String destination, String pnrNumber, int userId) {
+    public ReservationDetails(String passengerName, String source, String destination, String pnrNumber, int userId) {
         this.passengerName = passengerName;
-        this.origin = origin;
+        this.source = source;
         this.destination = destination;
         this.pnrNumber = pnrNumber;
         this.userId = userId;   
@@ -17,8 +17,8 @@ public class ReservationDetails{
         return passengerName;
     }
 
-    public String getOrigin() {
-        return origin;
+    public String getSource() {
+        return source;
     }
 
     public String getDestination() {
@@ -37,8 +37,8 @@ public class ReservationDetails{
         this.passengerName = passengerName;
     }
 
-    public void setOrigin() {
-        this.origin = origin;
+    public void setSource() {
+        this.source = source;
     }
 
     public void setDestination() {
